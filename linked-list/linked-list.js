@@ -111,24 +111,3 @@ LinkedList.prototype.removeHead = function(){
 
     return val;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
