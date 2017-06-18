@@ -102,7 +102,7 @@ LinkedList.prototype.removeHead = function(){
     // if there is a head node after removing the previous node,
     // sets the new head "previous" node to null
     if(this.head) {
-        this.head.previous = null;
+        this.head.prev = null;
     } else {
         // if after setting the new head, the head still null, removes the tail
         // because it means that there is no head anymore, so no tail must exists
