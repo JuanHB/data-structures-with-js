@@ -82,3 +82,53 @@ LinkedList.prototype.addToTail = function(value){
      */
     this.tail = newNode;
 };
+
+/**
+ * Remove the head from the Linked List
+ * @returns {*} the value of the removed head
+ */
+LinkedList.prototype.removeHead = function(){
+    // if the head is empty, there is nothing to be removed, returns null
+    if(!this.head) return null;
+
+    // save the value of the head node in a variable,
+    // to be returned later on
+    var val = this.head.value;
+
+    // remove the head node, by setting the new head
+    // to be the next node from the current head node
+    this.head = this.head.next;
+
+    // if there is a head node after removing the previous node,
+    // sets the new head "previous" node to null
+    if(this.head) {
+        this.head.previous = null;
+    } else {
+        // if after setting the new head, the head still null, removes the tail
+        // because it means that there is no head anymore, so no tail must exists
+        this.tail = null;
+    }
+
+    return val;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
